@@ -4,9 +4,12 @@
 
 #include "structs.h"
 
-obj kirikou;
+pos kirikou;
+pos cam;
+map* curmap;
 
 #include "functions.h"
+#include "map_benin.h"
 
 int main(int argc, char **argv){
 
@@ -28,8 +31,10 @@ int main(int argc, char **argv){
 	NF_VramSpriteGfx(1, 0, 0, false);
 	NF_VramSpritePal(1, 0, 0);
 
-	NF_LoadTiledBg("bg/benin", "be", 768, 768);
-	NF_CreateTiledBg(1, 3, "be");
+	curmap = &be;
+
+	LoadMap(curmap);
+	kirikouStart();
 
 	while(1){
 		NF_SpriteOamSet(0);
@@ -42,6 +47,7 @@ int main(int argc, char **argv){
 
 		scanKeys();
 		kirikouUpdate();
+		UpdateObj();
 	}
 
 	return 0;

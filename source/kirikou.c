@@ -7,9 +7,14 @@
 void kirikouStart(){
     kirikou.x = 0;
     kirikou.y = 0;
+    cam.x = 0;
+    cam.y = 0;
     NF_CreateSprite(1, 0, 0, 0, kirikou.x, kirikou.y);
 }
 void kirikouUpdate(){
+    s16 spr_x, spr_y;
+    bool x_flag = false;
+    bool y_flag = false;
     if(KEY_RIGHT & keysHeld()){
         kirikou.x += 2;
     }
@@ -34,6 +39,46 @@ void kirikouUpdate(){
     if(kirikou.y > 768){
         kirikou.y = 768;
     }
-    NF_MoveSprite(1, 0, kirikou.x, kirikou.y);
-    NF_ScrollBg(1, 3, kirikou.x, kirikou.y);
+    spr_x = 120;
+    spr_y = 80;
+    if(kirikou.x < 120){
+        spr_x = kirikou.x;
+        x_flag = true;
+    }
+    if(kirikou.y < 80){
+        spr_y = kirikou.y;
+        y_flag = true;
+    }
+    if(kirikou.x > 632){
+        spr_x = kirikou.x-512;
+        x_flag = true;
+    }
+    if(kirikou.y > 656){
+        spr_y = kirikou.y-576;
+        y_flag = true;
+    }
+    if(x_flag == false){
+        cam.x = kirikou.x-120;
+    }
+    else{
+        if(kirikou.x < 120){
+            cam.x = 0;
+        }
+        if(kirikou.x > 632){
+            cam.x = 512;
+        }
+    }
+    if(y_flag == false){
+        cam.y = kirikou.y-80;
+    }
+    else{
+        if(kirikou.y < 80){
+            cam.y = 0;
+        }
+        if(kirikou.y > 688){
+            cam.y = 576;
+        }
+    }
+    NF_MoveSprite(1, 0, spr_x, spr_y);
+    NF_ScrollBg(1, 3, cam.x, cam.y);
 }

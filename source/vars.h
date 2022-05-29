@@ -1,4 +1,6 @@
 #ifndef VARS_H
 #define VARS_H
-extern obj kirikou;
+extern pos kirikou;
+extern pos cam;
+extern map* curmap;
 #endif
