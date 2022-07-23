@@ -22,9 +22,9 @@ include $(DEVKITARM)/base_rules
 
 LIBNDS	:=	$(DEVKITPRO)/libnds
 
-GAME_TITLE	    :=	Text 1
-GAME_SUBTITLE1	:=	Text 2
-GAME_SUBTITLE2	:=	Text 3
+GAME_TITLE	    :=	KIRIKOU3
+GAME_SUBTITLE1	:=	PRE-ALPHA
+GAME_SUBTITLE2	:=	1
 GAME_ICON		:=	$(CURDIR)/../icon.bmp
 
 _ADDFILES	:=	-d $(NITRO_FILES)
@@ -70,6 +70,7 @@ SOURCES		:=	source
 INCLUDES	:=	include
 DATA		:=	data
 NITRODATA	:=	nitrofiles
+AUDIO		:=	audio
 
 #---------------------------------------------------------------------------------
 # options for code generation
@@ -90,7 +91,7 @@ LDFLAGS	=	-specs=ds_arm9.specs -g $(ARCH) -Wl,-Map,$(notdir $*.map)
 #---------------------------------------------------------------------------------
 # any extra libraries we wish to link with the project
 #---------------------------------------------------------------------------------
-LIBS	:= -lnflib -lfilesystem -lfat -lnds9
+LIBS	:= -lnflib -lfilesystem -lfat -lnds9 -lmm9
 
 
 #---------------------------------------------------------------------------------
@@ -119,7 +120,9 @@ export NITRO_FILES	:=	$(CURDIR)/$(NITRODATA)
 CFILES		:=	$(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.c)))
 CPPFILES	:=	$(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.cpp)))
 SFILES		:=	$(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.s)))
-BINFILES	:=	$(foreach dir,$(DATA),$(notdir $(wildcard $(dir)/*.*)))
+BINFILES	:=	$(foreach dir,$(DATA),$(notdir $(wildcard $(dir)/*.*))) soundbank.bin
+
+export AUDIOFILES := $(foreach dir,$(notdir $(wildcard $(AUDIO)/*.*)),$(CURDIR)/$(AUDIO)/$(dir))
 
 #---------------------------------------------------------------------------------
 # use CXX for linking C++ projects, CC for standard C
@@ -180,6 +183,13 @@ $(OUTPUT).elf	:	$(OFILES)
 #---------------------------------------------------------------------------------
 	@echo $(notdir $<)
 	$(bin2o)
+
+#-------------------------------------------------------------
+# rule for generating soundbank file from audio files
+#-------------------------------------------------------------
+soundbank.bin:	$(AUDIOFILES)
+#-------------------------------------------------------------
+	@mmutil $^ -osoundbank.bin -hsoundbank.h -d
 
 #---------------------------------------------------------------------------------------
 endif

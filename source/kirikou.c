@@ -5,8 +5,8 @@
 #include "include.h"
 
 void kirikouStart(){
-    kirikou.x = 0;
-    kirikou.y = 0;
+    kirikou.x = 384;
+    kirikou.y = 478;
     cam.x = 0;
     cam.y = 0;
     NF_CreateSprite(1, 0, 0, 0, kirikou.x, kirikou.y);
@@ -16,16 +16,16 @@ void kirikouUpdate(){
     bool x_flag = false;
     bool y_flag = false;
     if(KEY_RIGHT & keysHeld()){
-        kirikou.x += 2;
+        kirikou.x += 1;
     }
     if(KEY_LEFT & keysHeld()){
-        kirikou.x -= 2;
+        kirikou.x -= 1;
     }
     if(KEY_DOWN & keysHeld()){
-        kirikou.y += 2;
+        kirikou.y += 1;
     }
     if(KEY_UP & keysHeld()){
-        kirikou.y -= 2;
+        kirikou.y -= 1;
     }
     if(kirikou.x < 0){
         kirikou.x = 0;
@@ -81,4 +81,5 @@ void kirikouUpdate(){
     }
     NF_MoveSprite(1, 0, spr_x, spr_y);
     NF_ScrollBg(1, 3, cam.x, cam.y);
+    NF_ScrollBg(1, 2, cam.x, cam.y);
 }

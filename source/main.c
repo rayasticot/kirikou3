@@ -1,12 +1,27 @@
 #include <stdio.h>
 #include <nds.h>
 #include <nf_lib.h>
+#include <maxmod9.h>
+#include "soundbank.h"
+#include "soundbank_bin.h"
 
+
+#include "define.h"
 #include "structs.h"
 
 pos kirikou;
 pos cam;
 map* curmap;
+
+bool checkCollision(int x1, int y1, int sx1, int sy1, int x2, int y2, int sx2, int sy2){
+	bool bouf = false;
+	if(x1+sx1 > x2 && x1 < x2+sx2){
+		if(y1+sy1 > y2 && y1 < y2+sy2){
+			bouf = true;
+		}
+	}
+	return bouf;
+}
 
 #include "functions.h"
 #include "map_benin.h"
@@ -23,6 +38,9 @@ int main(int argc, char **argv){
 	NF_InitTiledBgSys(0);
 	NF_InitTiledBgSys(1);
 	soundEnable();
+	mmInitDefaultMem((mm_addr)soundbank_bin);
+	mmLoad(MOD_BAISE);
+	mmStart(MOD_BAISE, MM_PLAY_LOOP);
 	NF_InitRawSoundBuffers();
 	NF_InitCmapBuffers();
 
@@ -49,6 +67,5 @@ int main(int argc, char **argv){
 		kirikouUpdate();
 		UpdateObj();
 	}
-
 	return 0;
 }
