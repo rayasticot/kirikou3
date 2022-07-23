@@ -16,7 +16,7 @@
 
 void Dialog(obj* objbuf){
   NF_LoadTiledBg(objbuf->bg, objbuf->bg, 256, 256);
-  NF_CreateTiledBg(0, 3, objbuf->bg);
+  NF_CreateTiledBg(0, 2, objbuf->bg);
   mmSetModuleVolume(128);
   mmLoadEffect(objbuf->sound[objbuf->dialog]);
   mm_sfxhand snd = mmEffect(objbuf->sound[objbuf->dialog]);

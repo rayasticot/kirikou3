@@ -24,8 +24,10 @@ void LoadMap(map* mape){
   NF_ResetTiledBgBuffers();
   NF_LoadTiledBg(mape->bg_map, "bgmap", 768, 768);
   NF_LoadTiledBg(mape->bg_obj, "bgobj", 768, 768);
+  NF_LoadTiledBg(mape->bg_mini, "bgmin", 768, 768);
   NF_CreateTiledBg(1, 3, "bgmap");
   NF_CreateTiledBg(1, 2, "bgobj");
+  NF_CreateTiledBg(0, 3, "bgmin");
   LoadSprites(*mape->npc_link);
   objbuf = mape->firstobj;
   while(1){

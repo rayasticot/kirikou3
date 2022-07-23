@@ -23,6 +23,7 @@ typedef struct obj{
 typedef struct map{
 	char* bg_map;
 	char* bg_obj;
+	char* bg_mini;
 	char** npc_link;
 	obj* firstobj;
 } map;

@@ -13,6 +13,7 @@ void kirikouStart(){
     cam.x = 0;
     cam.y = 0;
     NF_CreateSprite(1, 0, 0, 0, kirikou.x, kirikou.y);
+    NF_CreateSprite(0, 15, 15, 15, kirikou.x/4, kirikou.y/4);
 }
 void kirikouUpdate(){
     int spr_x, spr_y;
@@ -83,6 +84,7 @@ void kirikouUpdate(){
         }
     }
     NF_MoveSprite(1, 0, spr_x, spr_y);
+    NF_MoveSprite(0, 15, (kirikou.x/4)+32, kirikou.y/4);
     NF_ScrollBg(1, 3, cam.x, cam.y);
     NF_ScrollBg(1, 2, cam.x, cam.y);
 }

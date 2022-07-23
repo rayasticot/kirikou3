@@ -50,6 +50,11 @@ int main(int argc, char **argv){
 	NF_VramSpriteGfx(1, 0, 0, false);
 	NF_VramSpritePal(1, 0, 0);
 
+	NF_LoadSpriteGfx("spr/mini", 15, 8, 8);
+	NF_LoadSpritePal("spr/mini", 15);
+	NF_VramSpriteGfx(0, 15, 15, false);
+	NF_VramSpritePal(0, 15, 15);
+
 	curmap = &be;
 
 	LoadMap(curmap);
