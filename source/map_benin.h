@@ -17,6 +17,7 @@ obj npc0 ={
   .state = 0,
   .radius = 32,
   .sound = {SFX_BE01, SFX_BE02, SFX_BE03, SFX_BE04, SFX_BE05},
+  .bg = "bg/richesse",
   .next = &npc1
 };
 map be ={

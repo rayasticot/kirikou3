@@ -9,10 +9,11 @@ make: *** No rule to make target 'all'.  Stop.
 # There is NO WARRANTY, to the extent permitted by law.
  
 
-# Make data base, printed on Sat Jul 23 13:45:36 2022
+# Make data base, printed on Sat Jul 23 17:55:28 2022
 
 # Variables
 
+ 
 # environment
 FPS_BROWSER_APP_PROFILE_STRING = Internet Explorer
 # environment
@@ -30,7 +31,6 @@ VBOX_HWVIRTEX_IGNORE_SVM_IN_USE = 1
 # makefile (from '/opt/devkitpro/devkitARM/base_tools', line 24)
 AR := arm-none-eabi-gcc-ar
 # makefile (from 'Makefile', line 26)
- 
 GAME_SUBTITLE1 := PRE-ALPHA
 # environment
 USERPROFILE = C:\Users\RayaCroissant
@@ -80,6 +80,7 @@ FPS_BROWSER_USER_PROFILE_STRING = Default
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # default
 .VARIABLES := 
+ 
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # automatic
@@ -150,6 +151,7 @@ INCLUDES := include
 icons := icon.bmp
 # automatic
 *F = $(notdir $*)
+ 
 # makefile (from 'Makefile', line 72)
 NITRODATA := nitrofiles
 # automatic
@@ -191,7 +193,6 @@ PATH := /opt/devkitpro/tools/bin:/opt/devkitpro/devkitARM/bin:/c/Program Files (
 # environment
 COMPUTERNAME = DESKTOP-RSO69KJ
 # environment
- 
 VRAY_SEND_FEEDBACK = 1
 # default
 MAKEFILES := 
@@ -204,6 +205,7 @@ PROMPT = $P$G
 # makefile (from 'Makefile', line 30)
 _ADDFILES := -d 
 # environment
+ 
 CHOCOLATEYLASTPATHUPDATE = 132734400014159940
 # makefile (from '/opt/devkitpro/devkitARM/base_tools', line 19)
 PREFIX := arm-none-eabi-
@@ -278,6 +280,7 @@ HOMEDRIVE = C:
 # environment
 PROCESSOR_ARCHITECTURE = AMD64
 # environment
+ 
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
 HOME = /home/RayaCroissant
@@ -293,7 +296,6 @@ TEMP = /home/RAYACR~1/AppData/Local/Temp
 VSCODE_IPC_HOOK = \\.\pipe\00de1b1bc0aee8115e547900592d889e-1.69.1-main-sock
 # environment
 TERM = xterm-256color
- 
 # makefile (from '/opt/devkitpro/devkitARM/base_tools', line 27)
 NM := arm-none-eabi-gcc-nm
 # default
@@ -344,6 +346,7 @@ PROCESSOR_IDENTIFIER = AMD64 Family 23 Model 8 Stepping 2, AuthenticAMD
 # Load=162/1024=16%, Rehash=0, Collisions=29/296=10%
 
 # Pattern-specific Variable Values
+ 
 
 # No pattern-specific variable values.
 
@@ -351,19 +354,18 @@ PROCESSOR_IDENTIFIER = AMD64 Family 23 Model 8 Stepping 2, AuthenticAMD
 
 # audio (device 9037106, inode 88946092640672409): 8 files, no impossibilities.
 # /home/RayaCroissant/Downloads/kirikou3/data: could not be stat'd.
-# . (device 9037106, inode 19421773393090618): 15 files, no impossibilities.
-# source (device 9037106, inode 56294995342235787): 11 files, no impossibilities.
+# . (device 9037106, inode 19421773393090618): 14 files, no impossibilities.
+# source (device 9037106, inode 56294995342235787): 12 files, no impossibilities.
 # data: could not be stat'd.
-# /home/RayaCroissant/Downloads/kirikou3/source (device 9037106, inode 56294995342235787): 11 files, no impossibilities.
+# /home/RayaCroissant/Downloads/kirikou3/source (device 9037106, inode 56294995342235787): 12 files, no impossibilities.
 
-# 45 files, no impossibilities in 6 directories.
+# 46 files, no impossibilities in 6 directories.
 
 # Implicit Rules
 
 %.a:
 #  recipe to execute (from '/opt/devkitpro/devkitARM/base_rules', line 12):
 	$(SILENTMSG) $(notdir $@)
- 
 	@rm -f $@
 	$(SILENTCMD)$(AR) -rc $@ $^
 
@@ -429,6 +431,7 @@ PROCESSOR_IDENTIFIER = AMD64 Family 23 Model 8 Stepping 2, AuthenticAMD
 
 %.o: %.cpp
 #  recipe to execute (from '/opt/devkitpro/devkitARM/base_rules', line 79):
+ 
 	$(SILENTMSG) $(notdir $<)
 	$(SILENTCMD)$(CXX) -MMD -MP -MF $(DEPSDIR)/$*.d $(CXXFLAGS) -c $< -o $@ $(ERROR_FILTER)
 
@@ -465,7 +468,6 @@ PROCESSOR_IDENTIFIER = AMD64 Family 23 Model 8 Stepping 2, AuthenticAMD
 %.arm9: %.elf
 #  recipe to execute (from 'Makefile', line 45):
 	@$(OBJCOPY) -O binary $< $@
- 
 	@echo built ... $(notdir $@)
 
 %.arm7: %.elf
@@ -491,7 +493,7 @@ PROCESSOR_IDENTIFIER = AMD64 Family 23 Model 8 Stepping 2, AuthenticAMD
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-28 22:00:48
+#  Last modified 2022-07-23 17:55:17.5652555
 #  File has been updated.
 #  Successfully updated.
 
@@ -540,6 +542,7 @@ build:
 
 .PHONY: build clean
 #  Implicit rule search has not been done.
+ 
 #  Modification time never checked.
 #  File has not been updated.
 
@@ -552,13 +555,12 @@ build:
 # General ('VPATH' variable) search path:
 # /home/RayaCroissant/Downloads/kirikou3/source:/home/RayaCroissant/Downloads/kirikou3/data
 
-# strcache buffers: 1 (0) / strings = 69 / storage = 692 B / avg = 10 B
-# current buf: size = 8162 B / used = 692 B / count = 69 / avg = 10 B
+# strcache buffers: 1 (0) / strings = 69 / storage = 693 B / avg = 10 B
+# current buf: size = 8162 B / used = 693 B / count = 69 / avg = 10 B
 
 # strcache performance: lookups = 108 / hit rate = 36%
 # hash-table stats:
- 
 # Load=69/8192=1%, Rehash=0, Collisions=3/108=3%
-# Finished Make data base on Sat Jul 23 13:45:36 2022
+# Finished Make data base on Sat Jul 23 17:55:28 2022
 
  

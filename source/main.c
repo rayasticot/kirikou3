@@ -12,6 +12,7 @@
 pos kirikou;
 pos cam;
 map* curmap;
+u16_f timer;
 
 bool checkCollision(int x1, int y1, int sx1, int sy1, int x2, int y2, int sx2, int sy2){
 	bool bouf = false;
@@ -66,6 +67,7 @@ int main(int argc, char **argv){
 		scanKeys();
 		kirikouUpdate();
 		UpdateObj();
+		if(timer != 0) timer--;
 	}
 	return 0;
 }

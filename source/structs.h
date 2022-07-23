@@ -5,6 +5,7 @@ typedef struct pos{
 	int y;
 } pos;
 typedef struct obj{
+	char* bg;
 	int x;
 	int y;
 	int sprx;
@@ -16,6 +17,7 @@ typedef struct obj{
 	u8_f type;
 	u8_f state;
 	u8_f sound[5];
+	u8_f dialog;
 	struct obj* next;
 } obj;
 typedef struct map{

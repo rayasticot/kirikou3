@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <nds.h>
 #include <nf_lib.h>
+#include <maxmod9.h>
+#include "soundbank.h"
+#include "soundbank_bin.h"
 
 #include "include.h"
 
@@ -12,7 +15,7 @@ void kirikouStart(){
     NF_CreateSprite(1, 0, 0, 0, kirikou.x, kirikou.y);
 }
 void kirikouUpdate(){
-    s16 spr_x, spr_y;
+    int spr_x, spr_y;
     bool x_flag = false;
     bool y_flag = false;
     if(KEY_RIGHT & keysHeld()){
