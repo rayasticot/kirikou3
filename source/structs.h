@@ -20,11 +20,29 @@ typedef struct obj{
 	u8_f dialog;
 	struct obj* next;
 } obj;
+typedef struct evil{
+	int x;
+	int y;
+	int sprx;
+	int spry;
+	u8_f id;
+	bool side;
+	bool type;
+	bool life;
+	struct evil* next;
+} evil;
+typedef struct cave{
+	char* bg;
+	char* cmap;
+	evil* firstevil;
+} cave;
 typedef struct map{
 	char* bg_map;
 	char* bg_obj;
 	char* bg_mini;
+	char* cmap;
 	char** npc_link;
 	obj* firstobj;
+	cave* cave;
 } map;
 #endif

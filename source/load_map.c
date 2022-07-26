@@ -21,13 +21,15 @@ void LoadSprites(char* link){
 
 void LoadMap(map* mape){
   obj* objbuf;
+  NF_ResetCmapBuffers();
   NF_ResetTiledBgBuffers();
   NF_LoadTiledBg(mape->bg_map, "bgmap", 768, 768);
   NF_LoadTiledBg(mape->bg_obj, "bgobj", 768, 768);
-  NF_LoadTiledBg(mape->bg_mini, "bgmin", 768, 768);
+  //NF_LoadTiledBg(mape->bg_mini, "bgmin", 768, 768);
   NF_CreateTiledBg(1, 3, "bgmap");
   NF_CreateTiledBg(1, 2, "bgobj");
-  NF_CreateTiledBg(0, 3, "bgmin");
+  //NF_CreateTiledBg(0, 3, "bgmin");
+  NF_LoadColisionBg(mape->cmap, 0, 768, 768);
   LoadSprites(*mape->npc_link);
   objbuf = mape->firstobj;
   while(1){
@@ -36,5 +38,20 @@ void LoadMap(map* mape){
     NF_CreateSprite(1, objbuf->id, objbuf->id, 1, objbuf->x, objbuf->y);
     if(objbuf->next == NULL) break;
     objbuf = objbuf->next;
+  }
+}
+
+void LoadCave(cave* cav){
+  evil* evilbuf;
+  NF_ResetCmapBuffers();
+  NF_ResetTiledBgBuffers();
+  NF_LoadTiledBg(cav->bg, "bg", 768, 768);
+  NF_CreateTiledBg(1, 3, "bg");
+  NF_LoadColisionBg(cav->cmap, 0, 768, 768);
+  evilbuf = cav->firstevil;
+  while(1){
+    NF_CreateSprite(1, evilbuf->id, 1, 1, evilbuf->x, evilbuf->y);
+    if(evilbuf->next == NULL) break;
+    evilbuf = evilbuf->next;
   }
 }

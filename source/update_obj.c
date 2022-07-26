@@ -34,7 +34,7 @@ void Dialog(obj* objbuf){
   }
   mmEffectCancel(snd);
   mmUnloadEffect(objbuf->sound[objbuf->dialog]);
-  NF_DeleteTiledBg(0, 3);
+  NF_DeleteTiledBg(0, 2);
   NF_UnloadTiledBg(objbuf->bg);
   mmSetModuleVolume(1024);
   if(objbuf->dialog++ == 4) objbuf->dialog = 0;

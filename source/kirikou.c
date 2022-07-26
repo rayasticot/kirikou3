@@ -13,23 +13,31 @@ void kirikouStart(){
     cam.x = 0;
     cam.y = 0;
     NF_CreateSprite(1, 0, 0, 0, kirikou.x, kirikou.y);
-    NF_CreateSprite(0, 15, 15, 15, kirikou.x/4, kirikou.y/4);
+    //NF_CreateSprite(0, 15, 15, 15, kirikou.x/4, kirikou.y/4);
 }
 void kirikouUpdate(){
     int spr_x, spr_y;
     bool x_flag = false;
     bool y_flag = false;
     if(KEY_RIGHT & keysHeld()){
-        kirikou.x += 1;
+        if(NF_GetTile(0, kirikou.x+17, kirikou.y) == 0 && NF_GetTile(0, kirikou.x+17, kirikou.y+32) == 0){
+            kirikou.x += 1;
+        }
     }
     if(KEY_LEFT & keysHeld()){
-        kirikou.x -= 1;
+        if(NF_GetTile(0, kirikou.x-1, kirikou.y) == 0 && NF_GetTile(0, kirikou.x-1, kirikou.y+32) == 0){
+            kirikou.x -= 1;
+        }
     }
     if(KEY_DOWN & keysHeld()){
-        kirikou.y += 1;
+        if(NF_GetTile(0, kirikou.x, kirikou.y+33) == 0 && NF_GetTile(0, kirikou.x+16, kirikou.y+33) == 0){
+            kirikou.y += 1;
+        }
     }
     if(KEY_UP & keysHeld()){
-        kirikou.y -= 1;
+        if(NF_GetTile(0, kirikou.x, kirikou.y-1) == 0 && NF_GetTile(0, kirikou.x+16, kirikou.y-1) == 0){
+            kirikou.y -= 1;
+        }
     }
     if(kirikou.x < 0){
         kirikou.x = 0;
@@ -84,7 +92,7 @@ void kirikouUpdate(){
         }
     }
     NF_MoveSprite(1, 0, spr_x, spr_y);
-    NF_MoveSprite(0, 15, (kirikou.x/4)+32, kirikou.y/4);
+    /*NF_MoveSprite(0, 15, (kirikou.x/4)+32, kirikou.y/4);*/
     NF_ScrollBg(1, 3, cam.x, cam.y);
     NF_ScrollBg(1, 2, cam.x, cam.y);
 }

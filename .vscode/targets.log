@@ -7,13 +7,11 @@ make: *** No rule to make target 'all'.  Stop.
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
- 
 
-# Make data base, printed on Sat Jul 23 17:55:28 2022
+# Make data base, printed on Tue Jul 26 11:56:23 2022
 
 # Variables
 
- 
 # environment
 FPS_BROWSER_APP_PROFILE_STRING = Internet Explorer
 # environment
@@ -41,11 +39,11 @@ CUDA_CACHE_MAXSIZE = 268435456
 # environment
 TMPDIR = /home/Public/Documents/Wondershare/CreatorTemp
 # makefile (from 'Makefile', line 141)
-OFILES := soundbank.bin.o  kirikou.o load_map.o main.o update_obj.o 
+OFILES := soundbank.bin.o  evil.o kirikou.o load_map.o main.o update_obj.o 
 # environment
 LOCALAPPDATA = C:\Users\RayaCroissant\AppData\Local
 # makefile (from 'Makefile', line 120)
-CFILES := kirikou.c load_map.c main.c update_obj.c
+CFILES := evil.c kirikou.c load_map.c main.c update_obj.c
 # makefile (from 'Makefile', line 113)
 VPATH := /home/RayaCroissant/Downloads/kirikou3/source /home/RayaCroissant/Downloads/kirikou3/data
 # environment
@@ -59,7 +57,7 @@ LIBS := -lnflib -lfilesystem -lfat -lnds9 -lmm9
 # makefile (from '/opt/devkitpro/devkitARM/base_tools', line 43)
 SILENTMSG := @echo
 # makefile (from 'Makefile', line 125)
-AUDIOFILES := /home/RayaCroissant/Downloads/kirikou3/audio/baise.xm /home/RayaCroissant/Downloads/kirikou3/audio/be01.wav /home/RayaCroissant/Downloads/kirikou3/audio/be02.wav /home/RayaCroissant/Downloads/kirikou3/audio/be03.wav /home/RayaCroissant/Downloads/kirikou3/audio/be04.wav /home/RayaCroissant/Downloads/kirikou3/audio/be05.wav
+AUDIOFILES := /home/RayaCroissant/Downloads/kirikou3/audio/attaque.xm /home/RayaCroissant/Downloads/kirikou3/audio/baise.xm /home/RayaCroissant/Downloads/kirikou3/audio/be01.wav /home/RayaCroissant/Downloads/kirikou3/audio/be02.wav /home/RayaCroissant/Downloads/kirikou3/audio/be03.wav /home/RayaCroissant/Downloads/kirikou3/audio/be04.wav /home/RayaCroissant/Downloads/kirikou3/audio/be05.wav /home/RayaCroissant/Downloads/kirikou3/audio/be11.wav /home/RayaCroissant/Downloads/kirikou3/audio/be12.wav /home/RayaCroissant/Downloads/kirikou3/audio/be13.wav /home/RayaCroissant/Downloads/kirikou3/audio/be14.wav /home/RayaCroissant/Downloads/kirikou3/audio/be21.wav /home/RayaCroissant/Downloads/kirikou3/audio/be22.wav /home/RayaCroissant/Downloads/kirikou3/audio/be23.wav /home/RayaCroissant/Downloads/kirikou3/audio/be24.wav /home/RayaCroissant/Downloads/kirikou3/audio/be31.wav /home/RayaCroissant/Downloads/kirikou3/audio/be32.wav /home/RayaCroissant/Downloads/kirikou3/audio/be33.wav /home/RayaCroissant/Downloads/kirikou3/audio/be34.wav /home/RayaCroissant/Downloads/kirikou3/audio/be35.wav
 # environment
 PROCESSOR_LEVEL = 23
 # environment
@@ -71,7 +69,7 @@ NITRO_FILES := /home/RayaCroissant/Downloads/kirikou3/nitrofiles
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_10700_AHJJKMKQBCVQOWDJ
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_1288_FSNNJHQKABTYBIRU
 # makefile (from 'Makefile', line 121)
 CPPFILES := 
 # environment
@@ -80,7 +78,6 @@ FPS_BROWSER_USER_PROFILE_STRING = Default
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # default
 .VARIABLES := 
- 
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # automatic
@@ -88,7 +85,7 @@ VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # automatic
 %F = $(notdir $%)
 # environment
-VSCODE_CODE_CACHE_PATH = C:\Users\RayaCroissant\AppData\Roaming\Code\CachedData\b06ae3b2d2dbfe28bca3134cc6be65935cdfea6a
+VSCODE_CODE_CACHE_PATH = C:\Users\RayaCroissant\AppData\Roaming\Code\CachedData\3b889b090b5ad5793f524b5d1d39fda662b96a2a
 # makefile (from 'Makefile', line 23)
 LIBNDS := /opt/devkitpro/libnds
 # environment
@@ -114,7 +111,7 @@ DEVKITARM = /opt/devkitpro/devkitARM
 # makefile
 CURDIR := /home/RayaCroissant/Downloads/kirikou3
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # makefile (from 'Makefile', line 116)
@@ -138,7 +135,7 @@ ASFLAGS := -g -mthumb -mthumb-interwork
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 10700
+VSCODE_PID = 1288
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # makefile (from '/opt/devkitpro/devkitARM/base_tools', line 28)
@@ -151,7 +148,6 @@ INCLUDES := include
 icons := icon.bmp
 # automatic
 *F = $(notdir $*)
- 
 # makefile (from 'Makefile', line 72)
 NITRODATA := nitrofiles
 # automatic
@@ -205,7 +201,6 @@ PROMPT = $P$G
 # makefile (from 'Makefile', line 30)
 _ADDFILES := -d 
 # environment
- 
 CHOCOLATEYLASTPATHUPDATE = 132734400014159940
 # makefile (from '/opt/devkitpro/devkitARM/base_tools', line 19)
 PREFIX := arm-none-eabi-
@@ -280,7 +275,6 @@ HOMEDRIVE = C:
 # environment
 PROCESSOR_ARCHITECTURE = AMD64
 # environment
- 
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
 HOME = /home/RayaCroissant
@@ -293,7 +287,7 @@ ELECTRON_RUN_AS_NODE = 1
 # environment
 TEMP = /home/RAYACR~1/AppData/Local/Temp
 # environment
-VSCODE_IPC_HOOK = \\.\pipe\00de1b1bc0aee8115e547900592d889e-1.69.1-main-sock
+VSCODE_IPC_HOOK = \\.\pipe\00de1b1bc0aee8115e547900592d889e-1.69.2-main-sock
 # environment
 TERM = xterm-256color
 # makefile (from '/opt/devkitpro/devkitARM/base_tools', line 27)
@@ -343,23 +337,22 @@ VRAY30_RT_FOR_3DSMAX2018_PLUGINS_X64 = C:\Program Files\Chaos Group\V-Ray\RT for
 # environment
 PROCESSOR_IDENTIFIER = AMD64 Family 23 Model 8 Stepping 2, AuthenticAMD
 # variable set hash-table stats:
-# Load=162/1024=16%, Rehash=0, Collisions=29/296=10%
+# Load=162/1024=16%, Rehash=0, Collisions=29/324=9%
 
 # Pattern-specific Variable Values
- 
 
 # No pattern-specific variable values.
 
 # Directories
 
-# audio (device 9037106, inode 88946092640672409): 8 files, no impossibilities.
+# audio (device 9037106, inode 88946092640672409): 22 files, no impossibilities.
 # /home/RayaCroissant/Downloads/kirikou3/data: could not be stat'd.
 # . (device 9037106, inode 19421773393090618): 14 files, no impossibilities.
-# source (device 9037106, inode 56294995342235787): 12 files, no impossibilities.
+# source (device 9037106, inode 56294995342235787): 13 files, no impossibilities.
 # data: could not be stat'd.
-# /home/RayaCroissant/Downloads/kirikou3/source (device 9037106, inode 56294995342235787): 12 files, no impossibilities.
+# /home/RayaCroissant/Downloads/kirikou3/source (device 9037106, inode 56294995342235787): 13 files, no impossibilities.
 
-# 46 files, no impossibilities in 6 directories.
+# 62 files, no impossibilities in 6 directories.
 
 # Implicit Rules
 
@@ -431,7 +424,6 @@ PROCESSOR_IDENTIFIER = AMD64 Family 23 Model 8 Stepping 2, AuthenticAMD
 
 %.o: %.cpp
 #  recipe to execute (from '/opt/devkitpro/devkitARM/base_rules', line 79):
- 
 	$(SILENTMSG) $(notdir $<)
 	$(SILENTCMD)$(CXX) -MMD -MP -MF $(DEPSDIR)/$*.d $(CXXFLAGS) -c $< -o $@ $(ERROR_FILTER)
 
@@ -493,7 +485,7 @@ PROCESSOR_IDENTIFIER = AMD64 Family 23 Model 8 Stepping 2, AuthenticAMD
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-23 17:55:17.5652555
+#  Last modified 2022-07-24 00:17:33.8431546
 #  File has been updated.
 #  Successfully updated.
 
@@ -542,7 +534,6 @@ build:
 
 .PHONY: build clean
 #  Implicit rule search has not been done.
- 
 #  Modification time never checked.
 #  File has not been updated.
 
@@ -555,12 +546,12 @@ build:
 # General ('VPATH' variable) search path:
 # /home/RayaCroissant/Downloads/kirikou3/source:/home/RayaCroissant/Downloads/kirikou3/data
 
-# strcache buffers: 1 (0) / strings = 69 / storage = 693 B / avg = 10 B
-# current buf: size = 8162 B / used = 693 B / count = 69 / avg = 10 B
+# strcache buffers: 1 (0) / strings = 84 / storage = 828 B / avg = 9 B
+# current buf: size = 8162 B / used = 828 B / count = 84 / avg = 9 B
 
-# strcache performance: lookups = 108 / hit rate = 36%
+# strcache performance: lookups = 123 / hit rate = 31%
 # hash-table stats:
-# Load=69/8192=1%, Rehash=0, Collisions=3/108=3%
-# Finished Make data base on Sat Jul 23 17:55:28 2022
+# Load=84/8192=1%, Rehash=0, Collisions=3/123=2%
+# Finished Make data base on Tue Jul 26 11:56:23 2022
 
  

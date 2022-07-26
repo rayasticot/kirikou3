@@ -38,11 +38,11 @@ int main(int argc, char **argv){
 	NF_InitTiledBgBuffers();
 	NF_InitTiledBgSys(0);
 	NF_InitTiledBgSys(1);
-	soundEnable();
-	mmInitDefaultMem((mm_addr)soundbank_bin);
+  	NF_LoadTiledBg("bg/loading", "load", 256, 256);
+  	NF_CreateTiledBg(0, 3, "load");
+	mmInitDefault("nitro:/soundbank.bin"); // Il est actuellement 01:33 du matin je galere depuis le 21h la solution est si nulle j'aurais pu trouver en 5 min
+	//mmInitDefaultMem((mm_addr)soundbank_bin); // J'ABANDONNE
 	mmLoad(MOD_BAISE);
-	mmStart(MOD_BAISE, MM_PLAY_LOOP);
-	NF_InitRawSoundBuffers();
 	NF_InitCmapBuffers();
 
 	NF_LoadSpriteGfx("spr/nada", 0, 16, 32);
@@ -50,15 +50,17 @@ int main(int argc, char **argv){
 	NF_VramSpriteGfx(1, 0, 0, false);
 	NF_VramSpritePal(1, 0, 0);
 
-	NF_LoadSpriteGfx("spr/mini", 15, 8, 8);
+	/*NF_LoadSpriteGfx("spr/mini", 15, 8, 8);
 	NF_LoadSpritePal("spr/mini", 15);
 	NF_VramSpriteGfx(0, 15, 15, false);
-	NF_VramSpritePal(0, 15, 15);
+	NF_VramSpritePal(0, 15, 15);*/
 
 	curmap = &be;
 
 	LoadMap(curmap);
 	kirikouStart();
+	NF_DeleteTiledBg(0, 3);
+	mmStart(MOD_BAISE, MM_PLAY_LOOP);
 
 	while(1){
 		NF_SpriteOamSet(0);
