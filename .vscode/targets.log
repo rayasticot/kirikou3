@@ -7,8 +7,9 @@ make: *** No rule to make target 'all'.  Stop.
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
+ 
 
-# Make data base, printed on Tue Jul 26 11:56:23 2022
+# Make data base, printed on Sun Aug  7 19:04:52 2022
 
 # Variables
 
@@ -31,6 +32,7 @@ AR := arm-none-eabi-gcc-ar
 # makefile (from 'Makefile', line 26)
 GAME_SUBTITLE1 := PRE-ALPHA
 # environment
+ 
 USERPROFILE = C:\Users\RayaCroissant
 # environment
 VBOX_MSI_INSTALL_PATH = C:\Program Files\Oracle\VirtualBox\
@@ -39,11 +41,11 @@ CUDA_CACHE_MAXSIZE = 268435456
 # environment
 TMPDIR = /home/Public/Documents/Wondershare/CreatorTemp
 # makefile (from 'Makefile', line 141)
-OFILES := soundbank.bin.o  evil.o kirikou.o load_map.o main.o update_obj.o 
+OFILES := soundbank.bin.o  evil.o kirikou.o load_map.o loop.o main.o update_obj.o 
 # environment
 LOCALAPPDATA = C:\Users\RayaCroissant\AppData\Local
 # makefile (from 'Makefile', line 120)
-CFILES := evil.c kirikou.c load_map.c main.c update_obj.c
+CFILES := evil.c kirikou.c load_map.c loop.c main.c update_obj.c
 # makefile (from 'Makefile', line 113)
 VPATH := /home/RayaCroissant/Downloads/kirikou3/source /home/RayaCroissant/Downloads/kirikou3/data
 # environment
@@ -69,7 +71,7 @@ NITRO_FILES := /home/RayaCroissant/Downloads/kirikou3/nitrofiles
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_1288_FSNNJHQKABTYBIRU
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_14416_OAWQVWUSXUQMWFZM
 # makefile (from 'Makefile', line 121)
 CPPFILES := 
 # environment
@@ -85,7 +87,7 @@ VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # automatic
 %F = $(notdir $%)
 # environment
-VSCODE_CODE_CACHE_PATH = C:\Users\RayaCroissant\AppData\Roaming\Code\CachedData\3b889b090b5ad5793f524b5d1d39fda662b96a2a
+VSCODE_CODE_CACHE_PATH = C:\Users\RayaCroissant\AppData\Roaming\Code\CachedData\da76f93349a72022ca4670c1b84860304616aaa2
 # makefile (from 'Makefile', line 23)
 LIBNDS := /opt/devkitpro/libnds
 # environment
@@ -108,6 +110,9 @@ INTEL_DEV_REDIST = C:\Program Files (x86)\Common Files\Intel\Shared Libraries\
 ONEDRIVE = C:\Users\RayaCroissant\OneDrive
 # environment
 DEVKITARM = /opt/devkitpro/devkitARM
+# environment
+POWERSHELL_DISTRIBUTION_CHANNEL = MSI:Windows 10 Pro
+ 
 # makefile
 CURDIR := /home/RayaCroissant/Downloads/kirikou3
 # environment
@@ -135,7 +140,7 @@ ASFLAGS := -g -mthumb -mthumb-interwork
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 1288
+VSCODE_PID = 14416
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # makefile (from '/opt/devkitpro/devkitARM/base_tools', line 28)
@@ -184,8 +189,9 @@ MAKELEVEL := 0
 LIBPATHS := -L/opt/devkitpro/libnds/lib -L/home/RayaCroissant/Downloads/kirikou3/nflib/lib
 # default
 MAKE = $(MAKE_COMMAND)
+ 
 # makefile (from '/opt/devkitpro/devkitARM/base_tools', line 14)
-PATH := /opt/devkitpro/tools/bin:/opt/devkitpro/devkitARM/bin:/c/Program Files (x86)/VMware/VMware Player/bin:/opt/devkitpro/msys2/usr/bin:/c/Program Files/ImageMagick-7.1.0-Q16-HDRI:/c/Program Files/AdoptOpenJDK/jdk-8.0.292.10-hotspot/bin:/c/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64_win/compiler:/c/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler:/c/ProgramData/Oracle/Java/javapath:/c/Windows/system32:/c/Windows:/c/Windows/System32/Wbem:/c/Windows/System32/WindowsPowerShell/v1.0:/c/Windows/System32/OpenSSH:/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/c/Program Files/Common Files/Autodesk Shared:/c/Program Files (x86)/Autodesk/Backburner:/c/Program Files/Microsoft SQL Server/120/Tools/Binn:/c/WINDOWS/system32:/c/WINDOWS:/c/WINDOWS/System32/Wbem:/c/WINDOWS/System32/WindowsPowerShell/v1.0:/c/WINDOWS/System32/OpenSSH:/c/WINDOWS/system32:/c/WINDOWS:/c/WINDOWS/System32/Wbem:/c/WINDOWS/System32/WindowsPowerShell/v1.0:/c/WINDOWS/System32/OpenSSH:/c/Program Files/Git/cmd:/c/Program Files/nodejs:/c/ProgramData/chocolatey/bin:/home/RayaCroissant/AppData/Local/Microsoft/WindowsApps:/home/RayaCroissant/AppData/Local/Programs/Microsoft VS Code/bin:/home/RayaCroissant/AppData/Roaming/npm:/c/Program Files/heroku/bin
+PATH := /opt/devkitpro/tools/bin:/opt/devkitpro/devkitARM/bin:/c/Program Files (x86)/VMware/VMware Player/bin:/opt/devkitpro/msys2/usr/bin:/c/Program Files/ImageMagick-7.1.0-Q16-HDRI:/c/Program Files/AdoptOpenJDK/jdk-8.0.292.10-hotspot/bin:/c/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64_win/compiler:/c/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler:/c/ProgramData/Oracle/Java/javapath:/c/Windows/system32:/c/Windows:/c/Windows/System32/Wbem:/c/Windows/System32/WindowsPowerShell/v1.0:/c/Windows/System32/OpenSSH:/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/c/Program Files/Common Files/Autodesk Shared:/c/Program Files (x86)/Autodesk/Backburner:/c/Program Files/Microsoft SQL Server/120/Tools/Binn:/c/WINDOWS/system32:/c/WINDOWS:/c/WINDOWS/System32/Wbem:/c/WINDOWS/System32/WindowsPowerShell/v1.0:/c/WINDOWS/System32/OpenSSH:/c/WINDOWS/system32:/c/WINDOWS:/c/WINDOWS/System32/Wbem:/c/WINDOWS/System32/WindowsPowerShell/v1.0:/c/WINDOWS/System32/OpenSSH:/c/Program Files/Git/cmd:/c/Program Files/nodejs:/c/ProgramData/chocolatey/bin:/c/Program Files/PowerShell/7:/home/RayaCroissant/AppData/Local/Programs/Python/Python310/Scripts:/home/RayaCroissant/AppData/Local/Programs/Python/Python310:/home/RayaCroissant/AppData/Local/Microsoft/WindowsApps:/home/RayaCroissant/AppData/Local/Programs/Microsoft VS Code/bin:/home/RayaCroissant/AppData/Roaming/npm:/c/Program Files/heroku/bin
 # environment
 COMPUTERNAME = DESKTOP-RSO69KJ
 # environment
@@ -274,6 +280,7 @@ CFLAGS := -g -Wall -O2 -march=armv5te -mtune=arm946e-s -fomit-frame-pointer -ffa
 HOMEDRIVE = C:
 # environment
 PROCESSOR_ARCHITECTURE = AMD64
+ 
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
@@ -287,7 +294,7 @@ ELECTRON_RUN_AS_NODE = 1
 # environment
 TEMP = /home/RAYACR~1/AppData/Local/Temp
 # environment
-VSCODE_IPC_HOOK = \\.\pipe\00de1b1bc0aee8115e547900592d889e-1.69.2-main-sock
+VSCODE_IPC_HOOK = \\.\pipe\00de1b1bc0aee8115e547900592d889e-1.70.0-main-sock
 # environment
 TERM = xterm-256color
 # makefile (from '/opt/devkitpro/devkitARM/base_tools', line 27)
@@ -337,7 +344,7 @@ VRAY30_RT_FOR_3DSMAX2018_PLUGINS_X64 = C:\Program Files\Chaos Group\V-Ray\RT for
 # environment
 PROCESSOR_IDENTIFIER = AMD64 Family 23 Model 8 Stepping 2, AuthenticAMD
 # variable set hash-table stats:
-# Load=162/1024=16%, Rehash=0, Collisions=29/324=9%
+# Load=163/1024=16%, Rehash=0, Collisions=29/325=9%
 
 # Pattern-specific Variable Values
 
@@ -347,12 +354,12 @@ PROCESSOR_IDENTIFIER = AMD64 Family 23 Model 8 Stepping 2, AuthenticAMD
 
 # audio (device 9037106, inode 88946092640672409): 22 files, no impossibilities.
 # /home/RayaCroissant/Downloads/kirikou3/data: could not be stat'd.
-# . (device 9037106, inode 19421773393090618): 14 files, no impossibilities.
-# source (device 9037106, inode 56294995342235787): 13 files, no impossibilities.
+# . (device 9037106, inode 19421773393090618): 15 files, no impossibilities.
+# source (device 9037106, inode 56294995342235787): 14 files, no impossibilities.
 # data: could not be stat'd.
-# /home/RayaCroissant/Downloads/kirikou3/source (device 9037106, inode 56294995342235787): 13 files, no impossibilities.
+# /home/RayaCroissant/Downloads/kirikou3/source (device 9037106, inode 56294995342235787): 14 files, no impossibilities.
 
-# 62 files, no impossibilities in 6 directories.
+# 65 files, no impossibilities in 6 directories.
 
 # Implicit Rules
 
@@ -410,6 +417,7 @@ PROCESSOR_IDENTIFIER = AMD64 Family 23 Model 8 Stepping 2, AuthenticAMD
 %.itcm.o: %.itcm.cpp
 #  recipe to execute (from '/opt/devkitpro/devkitARM/base_rules', line 63):
 	$(SILENTMSG) $(notdir $<)
+ 
 	$(SILENTCMD)$(CXX) -MMD -MP -MF $(DEPSDIR)/$*.itcm.d $(CXXFLAGS) -marm -mlong-calls -c $< -o $@ $(ERROR_FILTER)
 
 %.itcm.o: %.itcm.c
@@ -546,12 +554,12 @@ build:
 # General ('VPATH' variable) search path:
 # /home/RayaCroissant/Downloads/kirikou3/source:/home/RayaCroissant/Downloads/kirikou3/data
 
-# strcache buffers: 1 (0) / strings = 84 / storage = 828 B / avg = 9 B
-# current buf: size = 8162 B / used = 828 B / count = 84 / avg = 9 B
+# strcache buffers: 1 (0) / strings = 86 / storage = 847 B / avg = 9 B
+# current buf: size = 8162 B / used = 847 B / count = 86 / avg = 9 B
 
-# strcache performance: lookups = 123 / hit rate = 31%
+# strcache performance: lookups = 125 / hit rate = 31%
 # hash-table stats:
-# Load=84/8192=1%, Rehash=0, Collisions=3/123=2%
-# Finished Make data base on Tue Jul 26 11:56:23 2022
+# Load=86/8192=1%, Rehash=0, Collisions=3/125=2%
+# Finished Make data base on Sun Aug  7 19:04:52 2022
 
  

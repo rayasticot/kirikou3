@@ -15,27 +15,52 @@ void kirikouStart(){
     NF_CreateSprite(1, 0, 0, 0, kirikou.x, kirikou.y);
     //NF_CreateSprite(0, 15, 15, 15, kirikou.x/4, kirikou.y/4);
 }
+void bulletUpdate(u8_f nombre){
+    switch(bal.side){
+        case 0:
+            break;
+        case 1:
+            bal.x++;
+            break;
+        case 2:
+            bal.x--;
+            break;
+        case 3:
+            bal.y++;
+            break;
+        case 4:
+            bal.y--;
+            break;
+    }
+}
+void kirikouGunUpdate(){
+    if(KEY_A & keysDown()){
+
+    }
+}
 void kirikouUpdate(){
     int spr_x, spr_y;
     bool x_flag = false;
     bool y_flag = false;
     if(KEY_RIGHT & keysHeld()){
-        if(NF_GetTile(0, kirikou.x+17, kirikou.y) == 0 && NF_GetTile(0, kirikou.x+17, kirikou.y+32) == 0){
+        NF_HflipSprite(1, 0, false);
+        if(NF_GetTile(0, kirikou.x+17, kirikou.y) == 0 && NF_GetTile(0, kirikou.x+17, kirikou.y+30) == 0){
             kirikou.x += 1;
         }
     }
     if(KEY_LEFT & keysHeld()){
-        if(NF_GetTile(0, kirikou.x-1, kirikou.y) == 0 && NF_GetTile(0, kirikou.x-1, kirikou.y+32) == 0){
+        NF_HflipSprite(1, 0, true);
+        if(NF_GetTile(0, kirikou.x-1, kirikou.y) == 0 && NF_GetTile(0, kirikou.x-1, kirikou.y+30) == 0){
             kirikou.x -= 1;
         }
     }
     if(KEY_DOWN & keysHeld()){
-        if(NF_GetTile(0, kirikou.x, kirikou.y+33) == 0 && NF_GetTile(0, kirikou.x+16, kirikou.y+33) == 0){
+        if(NF_GetTile(0, kirikou.x, kirikou.y+33) == 0 && NF_GetTile(0, kirikou.x+14, kirikou.y+33) == 0){
             kirikou.y += 1;
         }
     }
     if(KEY_UP & keysHeld()){
-        if(NF_GetTile(0, kirikou.x, kirikou.y-1) == 0 && NF_GetTile(0, kirikou.x+16, kirikou.y-1) == 0){
+        if(NF_GetTile(0, kirikou.x, kirikou.y-1) == 0 && NF_GetTile(0, kirikou.x+14, kirikou.y-1) == 0){
             kirikou.y -= 1;
         }
     }

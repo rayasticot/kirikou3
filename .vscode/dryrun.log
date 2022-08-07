@@ -3,6 +3,5 @@ make: Entering directory '/home/RayaCroissant/Downloads/kirikou3'
  
 [ -d build ] || mkdir -p build
 make --no-print-directory -C build -f /home/RayaCroissant/Downloads/kirikou3/Makefile
- 
 make: Leaving directory '/home/RayaCroissant/Downloads/kirikou3'
  

@@ -4,6 +4,11 @@ typedef struct pos{
 	int x;
 	int y;
 } pos;
+typedef struct balle{
+	int x;
+	int y;
+	u8_f side;
+} balle;
 typedef struct obj{
 	char* bg;
 	int x;
@@ -34,6 +39,7 @@ typedef struct evil{
 typedef struct cave{
 	char* bg;
 	char* cmap;
+	int song;
 	evil* firstevil;
 } cave;
 typedef struct map{
@@ -42,6 +48,7 @@ typedef struct map{
 	char* bg_mini;
 	char* cmap;
 	char** npc_link;
+	int song;
 	obj* firstobj;
 	cave* cave;
 } map;

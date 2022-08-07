@@ -12,16 +12,18 @@
 pos kirikou;
 pos cam;
 map* curmap;
+cave* curcave;
 u16_f timer;
+bool iscave = false;
+balle bal;
 
 bool checkCollision(int x1, int y1, int sx1, int sy1, int x2, int y2, int sx2, int sy2){
-	bool bouf = false;
 	if(x1+sx1 > x2 && x1 < x2+sx2){
 		if(y1+sy1 > y2 && y1 < y2+sy2){
-			bouf = true;
+			return true;
 		}
 	}
-	return bouf;
+	return false;
 }
 
 #include "functions.h"
@@ -40,9 +42,8 @@ int main(int argc, char **argv){
 	NF_InitTiledBgSys(1);
   	NF_LoadTiledBg("bg/loading", "load", 256, 256);
   	NF_CreateTiledBg(0, 3, "load");
-	mmInitDefault("nitro:/soundbank.bin"); // Il est actuellement 01:33 du matin je galere depuis le 21h la solution est si nulle j'aurais pu trouver en 5 min
+	mmInitDefault("nitro:/soundbank.bin"); // CREDIT A MATHISZER HAHAHAHAHA C4EST LUI QUI A ECRIT CE CODE HAHAHAHAHHAHAHA LE GOAT
 	//mmInitDefaultMem((mm_addr)soundbank_bin); // J'ABANDONNE
-	mmLoad(MOD_BAISE);
 	NF_InitCmapBuffers();
 
 	NF_LoadSpriteGfx("spr/nada", 0, 16, 32);
@@ -60,7 +61,6 @@ int main(int argc, char **argv){
 	LoadMap(curmap);
 	kirikouStart();
 	NF_DeleteTiledBg(0, 3);
-	mmStart(MOD_BAISE, MM_PLAY_LOOP);
 
 	while(1){
 		NF_SpriteOamSet(0);
@@ -74,6 +74,12 @@ int main(int argc, char **argv){
 		scanKeys();
 		kirikouUpdate();
 		UpdateObj();
+		if(iscave == true){
+			EvilUpdate();
+		}
+		if(KEY_Y & keysDown()){
+			LoadCave(&cavebe, &be);
+		}
 		if(timer != 0) timer--;
 	}
 	return 0;

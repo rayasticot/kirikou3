@@ -7,14 +7,14 @@
 
 #include "include.h"
 
-#define up 1
-#define down 2
-#define right 3
-#define left 4
+#define UP 1
+#define DOWN 2
+#define RIGHT 3
+#define LEFT 4
 
 
 
-void Dialog(obj* objbuf){
+static void Dialog(obj* objbuf){
   NF_LoadTiledBg(objbuf->bg, objbuf->bg, 256, 256);
   NF_CreateTiledBg(0, 2, objbuf->bg);
   mmSetModuleVolume(128);
@@ -40,7 +40,31 @@ void Dialog(obj* objbuf){
   if(objbuf->dialog++ == 4) objbuf->dialog = 0;
 }
 
-void UpdateNpc(obj* objbuf){
+static void moveNpc(obj* objbuf, int* check, int* def, bool aug){
+  if(*check > *def - objbuf->radius && *check < *def + objbuf->radius){
+    /*if(rand() % 40 + 1 == 1){
+      objbuf->state = 0;
+      break;
+    }*/
+    if(aug == true){
+      (*check)++;
+    }
+    else{
+      (*check)--;
+    }
+  }
+  else{
+    if(aug == true){
+      (*check)--;
+    }
+    else{
+      (*check)++;
+    }
+    objbuf->state = 0;
+  }
+}
+
+static void UpdateNpc(obj* objbuf){
   int randnum;
     switch(objbuf->state){
       case 0:
@@ -49,45 +73,17 @@ void UpdateNpc(obj* objbuf){
           objbuf->state = randnum;
         }
         break;
-      case up:
-        if(objbuf->y > objbuf->defy - objbuf->radius && objbuf->y < objbuf->defy + objbuf->radius){
-          if(rand() % 40 + 1 == 1){
-            objbuf->state = 0;
-            break;
-          }
-          objbuf->y++;
-        }
-        else{
-          objbuf->y--;
-          objbuf->state = 0;
-        }
+      case UP:
+        moveNpc(objbuf, &objbuf->y, &objbuf->defy, true);
         break;
-      case down:
-        if(objbuf->y > objbuf->defy - objbuf->radius && objbuf->y < objbuf->defy + objbuf->radius){
-          objbuf->y--;
-        }
-        else{
-          objbuf->y++;
-          objbuf->state = 0;
-        }
+      case DOWN:
+        moveNpc(objbuf, &objbuf->y, &objbuf->defy, false);
         break;
-      case left:
-        if(objbuf->x > objbuf->defx - objbuf->radius && objbuf->x < objbuf->defx + objbuf->radius){
-          objbuf->x++;
-        }
-        else{
-          objbuf->x--;
-          objbuf->state = 0;
-        }
+      case LEFT:
+        moveNpc(objbuf, &objbuf->x, &objbuf->defx, true);
         break;
-      case right:
-        if(objbuf->x > objbuf->defx - objbuf->radius && objbuf->x < objbuf->defx + objbuf->radius){
-          objbuf->x--;
-        }
-        else{
-          objbuf->x++;
-          objbuf->state = 0;
-        }
+      case RIGHT:
+        moveNpc(objbuf, &objbuf->x, &objbuf->defx, false);
         break;
     }
   if(checkCollision(objbuf->x, objbuf->y, 16, 32, kirikou.x, kirikou.y, 16, 32) == true && timer == 0){
