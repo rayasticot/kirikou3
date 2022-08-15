@@ -16,6 +16,7 @@ cave* curcave;
 u16_f timer;
 bool iscave = false;
 balle bal;
+u8_f cur_song = MOD_BAISE;
 
 bool checkCollision(int x1, int y1, int sx1, int sy1, int x2, int y2, int sx2, int sy2){
 	if(x1+sx1 > x2 && x1 < x2+sx2){
@@ -76,8 +77,9 @@ int main(int argc, char **argv){
 		UpdateObj();
 		if(iscave == true){
 			EvilUpdate();
+			kirikouGunUpdate();
 		}
-		if(KEY_Y & keysDown()){
+		if(KEY_Y & keysDown() && iscave == false){
 			LoadCave(&cavebe, &be);
 		}
 		if(timer != 0) timer--;

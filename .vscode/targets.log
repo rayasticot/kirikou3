@@ -9,7 +9,7 @@ make: *** No rule to make target 'all'.  Stop.
 # There is NO WARRANTY, to the extent permitted by law.
  
 
-# Make data base, printed on Sun Aug  7 19:04:52 2022
+# Make data base, printed on Mon Aug 15 22:29:41 2022
 
 # Variables
 
@@ -32,7 +32,6 @@ AR := arm-none-eabi-gcc-ar
 # makefile (from 'Makefile', line 26)
 GAME_SUBTITLE1 := PRE-ALPHA
 # environment
- 
 USERPROFILE = C:\Users\RayaCroissant
 # environment
 VBOX_MSI_INSTALL_PATH = C:\Program Files\Oracle\VirtualBox\
@@ -50,6 +49,7 @@ CFILES := evil.c kirikou.c load_map.c loop.c main.c update_obj.c
 VPATH := /home/RayaCroissant/Downloads/kirikou3/source /home/RayaCroissant/Downloads/kirikou3/data
 # environment
 VSCODE_CWD = C:\Users\RayaCroissant\AppData\Local\Programs\Microsoft VS Code
+ 
 # environment
 CHOCOLATEYINSTALL = C:\ProgramData\chocolatey
 # environment
@@ -59,7 +59,7 @@ LIBS := -lnflib -lfilesystem -lfat -lnds9 -lmm9
 # makefile (from '/opt/devkitpro/devkitARM/base_tools', line 43)
 SILENTMSG := @echo
 # makefile (from 'Makefile', line 125)
-AUDIOFILES := /home/RayaCroissant/Downloads/kirikou3/audio/attaque.xm /home/RayaCroissant/Downloads/kirikou3/audio/baise.xm /home/RayaCroissant/Downloads/kirikou3/audio/be01.wav /home/RayaCroissant/Downloads/kirikou3/audio/be02.wav /home/RayaCroissant/Downloads/kirikou3/audio/be03.wav /home/RayaCroissant/Downloads/kirikou3/audio/be04.wav /home/RayaCroissant/Downloads/kirikou3/audio/be05.wav /home/RayaCroissant/Downloads/kirikou3/audio/be11.wav /home/RayaCroissant/Downloads/kirikou3/audio/be12.wav /home/RayaCroissant/Downloads/kirikou3/audio/be13.wav /home/RayaCroissant/Downloads/kirikou3/audio/be14.wav /home/RayaCroissant/Downloads/kirikou3/audio/be21.wav /home/RayaCroissant/Downloads/kirikou3/audio/be22.wav /home/RayaCroissant/Downloads/kirikou3/audio/be23.wav /home/RayaCroissant/Downloads/kirikou3/audio/be24.wav /home/RayaCroissant/Downloads/kirikou3/audio/be31.wav /home/RayaCroissant/Downloads/kirikou3/audio/be32.wav /home/RayaCroissant/Downloads/kirikou3/audio/be33.wav /home/RayaCroissant/Downloads/kirikou3/audio/be34.wav /home/RayaCroissant/Downloads/kirikou3/audio/be35.wav
+AUDIOFILES := /home/RayaCroissant/Downloads/kirikou3/audio/attaque.xm /home/RayaCroissant/Downloads/kirikou3/audio/baise.xm /home/RayaCroissant/Downloads/kirikou3/audio/be01.wav /home/RayaCroissant/Downloads/kirikou3/audio/be02.wav /home/RayaCroissant/Downloads/kirikou3/audio/be03.wav /home/RayaCroissant/Downloads/kirikou3/audio/be04.wav /home/RayaCroissant/Downloads/kirikou3/audio/be05.wav /home/RayaCroissant/Downloads/kirikou3/audio/be11.wav /home/RayaCroissant/Downloads/kirikou3/audio/be12.wav /home/RayaCroissant/Downloads/kirikou3/audio/be13.wav /home/RayaCroissant/Downloads/kirikou3/audio/be14.wav /home/RayaCroissant/Downloads/kirikou3/audio/be21.wav /home/RayaCroissant/Downloads/kirikou3/audio/be22.wav /home/RayaCroissant/Downloads/kirikou3/audio/be23.wav /home/RayaCroissant/Downloads/kirikou3/audio/be24.wav /home/RayaCroissant/Downloads/kirikou3/audio/be31.wav /home/RayaCroissant/Downloads/kirikou3/audio/be32.wav /home/RayaCroissant/Downloads/kirikou3/audio/be33.wav /home/RayaCroissant/Downloads/kirikou3/audio/be34.wav /home/RayaCroissant/Downloads/kirikou3/audio/be35.wav /home/RayaCroissant/Downloads/kirikou3/audio/cave.xm /home/RayaCroissant/Downloads/kirikou3/audio/gun.wav /home/RayaCroissant/Downloads/kirikou3/audio/os.wav /home/RayaCroissant/Downloads/kirikou3/audio/rip.wav
 # environment
 PROCESSOR_LEVEL = 23
 # environment
@@ -71,7 +71,7 @@ NITRO_FILES := /home/RayaCroissant/Downloads/kirikou3/nitrofiles
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_14416_OAWQVWUSXUQMWFZM
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_19344_HGWVCRXMRSHASFRN
 # makefile (from 'Makefile', line 121)
 CPPFILES := 
 # environment
@@ -112,7 +112,6 @@ ONEDRIVE = C:\Users\RayaCroissant\OneDrive
 DEVKITARM = /opt/devkitpro/devkitARM
 # environment
 POWERSHELL_DISTRIBUTION_CHANNEL = MSI:Windows 10 Pro
- 
 # makefile
 CURDIR := /home/RayaCroissant/Downloads/kirikou3
 # environment
@@ -140,7 +139,7 @@ ASFLAGS := -g -mthumb -mthumb-interwork
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 14416
+VSCODE_PID = 19344
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # makefile (from '/opt/devkitpro/devkitARM/base_tools', line 28)
@@ -171,6 +170,7 @@ MAKE_HOST := x86_64-pc-msys
 PROGRAMDATA = C:\ProgramData
 # default
 SHELL := /bin/sh
+ 
 # environment
 HOMEPATH = \Users\RayaCroissant
 # default
@@ -189,7 +189,6 @@ MAKELEVEL := 0
 LIBPATHS := -L/opt/devkitpro/libnds/lib -L/home/RayaCroissant/Downloads/kirikou3/nflib/lib
 # default
 MAKE = $(MAKE_COMMAND)
- 
 # makefile (from '/opt/devkitpro/devkitARM/base_tools', line 14)
 PATH := /opt/devkitpro/tools/bin:/opt/devkitpro/devkitARM/bin:/c/Program Files (x86)/VMware/VMware Player/bin:/opt/devkitpro/msys2/usr/bin:/c/Program Files/ImageMagick-7.1.0-Q16-HDRI:/c/Program Files/AdoptOpenJDK/jdk-8.0.292.10-hotspot/bin:/c/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64_win/compiler:/c/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler:/c/ProgramData/Oracle/Java/javapath:/c/Windows/system32:/c/Windows:/c/Windows/System32/Wbem:/c/Windows/System32/WindowsPowerShell/v1.0:/c/Windows/System32/OpenSSH:/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/c/Program Files/Common Files/Autodesk Shared:/c/Program Files (x86)/Autodesk/Backburner:/c/Program Files/Microsoft SQL Server/120/Tools/Binn:/c/WINDOWS/system32:/c/WINDOWS:/c/WINDOWS/System32/Wbem:/c/WINDOWS/System32/WindowsPowerShell/v1.0:/c/WINDOWS/System32/OpenSSH:/c/WINDOWS/system32:/c/WINDOWS:/c/WINDOWS/System32/Wbem:/c/WINDOWS/System32/WindowsPowerShell/v1.0:/c/WINDOWS/System32/OpenSSH:/c/Program Files/Git/cmd:/c/Program Files/nodejs:/c/ProgramData/chocolatey/bin:/c/Program Files/PowerShell/7:/home/RayaCroissant/AppData/Local/Programs/Python/Python310/Scripts:/home/RayaCroissant/AppData/Local/Programs/Python/Python310:/home/RayaCroissant/AppData/Local/Microsoft/WindowsApps:/home/RayaCroissant/AppData/Local/Programs/Microsoft VS Code/bin:/home/RayaCroissant/AppData/Roaming/npm:/c/Program Files/heroku/bin
 # environment
@@ -251,6 +250,7 @@ GAME_TITLE := KIRIKOU3
 # makefile
 .DEFAULT_GOAL := build
 # makefile (from 'Makefile', line 78)
+ 
 ARCH := -mthumb -mthumb-interwork
 # default
 MAKE_VERSION := 4.3
@@ -280,7 +280,6 @@ CFLAGS := -g -Wall -O2 -march=armv5te -mtune=arm946e-s -fomit-frame-pointer -ffa
 HOMEDRIVE = C:
 # environment
 PROCESSOR_ARCHITECTURE = AMD64
- 
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
@@ -344,7 +343,7 @@ VRAY30_RT_FOR_3DSMAX2018_PLUGINS_X64 = C:\Program Files\Chaos Group\V-Ray\RT for
 # environment
 PROCESSOR_IDENTIFIER = AMD64 Family 23 Model 8 Stepping 2, AuthenticAMD
 # variable set hash-table stats:
-# Load=163/1024=16%, Rehash=0, Collisions=29/325=9%
+# Load=163/1024=16%, Rehash=0, Collisions=29/333=9%
 
 # Pattern-specific Variable Values
 
@@ -352,14 +351,14 @@ PROCESSOR_IDENTIFIER = AMD64 Family 23 Model 8 Stepping 2, AuthenticAMD
 
 # Directories
 
-# audio (device 9037106, inode 88946092640672409): 22 files, no impossibilities.
+# audio (device 9037106, inode 88946092640672409): 26 files, no impossibilities.
 # /home/RayaCroissant/Downloads/kirikou3/data: could not be stat'd.
 # . (device 9037106, inode 19421773393090618): 15 files, no impossibilities.
 # source (device 9037106, inode 56294995342235787): 14 files, no impossibilities.
 # data: could not be stat'd.
 # /home/RayaCroissant/Downloads/kirikou3/source (device 9037106, inode 56294995342235787): 14 files, no impossibilities.
 
-# 65 files, no impossibilities in 6 directories.
+# 69 files, no impossibilities in 6 directories.
 
 # Implicit Rules
 
@@ -383,6 +382,7 @@ PROCESSOR_IDENTIFIER = AMD64 Family 23 Model 8 Stepping 2, AuthenticAMD
 #  recipe to execute (from '/opt/devkitpro/devkitARM/base_rules', line 28):
 	$(SILENTMSG) $(notdir $<)
 	$(SILENTCMD)$(CC) -MMD -MP -MF $(DEPSDIR)/$*.arm.d $(OBJCFLAGS) -marm -c $< -o $@ $(ERROR_FILTER)
+ 
 
 %.thumb.o: %.thumb.cpp
 #  recipe to execute (from '/opt/devkitpro/devkitARM/base_rules', line 33):
@@ -417,7 +417,6 @@ PROCESSOR_IDENTIFIER = AMD64 Family 23 Model 8 Stepping 2, AuthenticAMD
 %.itcm.o: %.itcm.cpp
 #  recipe to execute (from '/opt/devkitpro/devkitARM/base_rules', line 63):
 	$(SILENTMSG) $(notdir $<)
- 
 	$(SILENTCMD)$(CXX) -MMD -MP -MF $(DEPSDIR)/$*.itcm.d $(CXXFLAGS) -marm -mlong-calls -c $< -o $@ $(ERROR_FILTER)
 
 %.itcm.o: %.itcm.c
@@ -506,6 +505,7 @@ clean:
 	@echo clean ...
 	@rm -fr $(BUILD) $(TARGET).elf $(TARGET).nds $(TARGET).arm9
 
+ 
 # Not a target:
 /opt/devkitpro/devkitARM/base_rules:
 #  Implicit rule search has been done.
@@ -554,12 +554,12 @@ build:
 # General ('VPATH' variable) search path:
 # /home/RayaCroissant/Downloads/kirikou3/source:/home/RayaCroissant/Downloads/kirikou3/data
 
-# strcache buffers: 1 (0) / strings = 86 / storage = 847 B / avg = 9 B
-# current buf: size = 8162 B / used = 847 B / count = 86 / avg = 9 B
+# strcache buffers: 1 (0) / strings = 90 / storage = 878 B / avg = 9 B
+# current buf: size = 8162 B / used = 878 B / count = 90 / avg = 9 B
 
-# strcache performance: lookups = 125 / hit rate = 31%
+# strcache performance: lookups = 129 / hit rate = 30%
 # hash-table stats:
-# Load=86/8192=1%, Rehash=0, Collisions=3/125=2%
-# Finished Make data base on Sun Aug  7 19:04:52 2022
+# Load=90/8192=1%, Rehash=0, Collisions=3/129=2%
+# Finished Make data base on Mon Aug 15 22:29:41 2022
 
  

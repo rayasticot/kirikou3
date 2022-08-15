@@ -7,6 +7,8 @@ typedef struct pos{
 typedef struct balle{
 	int x;
 	int y;
+	int sprx;
+	int spry;
 	u8_f side;
 } balle;
 typedef struct obj{

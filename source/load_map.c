@@ -76,9 +76,14 @@ void LoadCave(cave* cav, map* mapbuf){
   evilbuf = cav->firstevil;
   while(1){
     NF_CreateSprite(1, evilbuf->id, 2, 1, evilbuf->x, evilbuf->y);
+    evilbuf->life = true;
     if(evilbuf->next == NULL) break;
     evilbuf = evilbuf->next;
   }
 	mmLoad(cav->song);
+  mmLoadEffect(SFX_RIP);
+  mmLoadEffect(SFX_OS);
+  mmLoadEffect(SFX_GUN);
 	mmStart(cav->song, MM_PLAY_LOOP);
+  NF_CreateSprite(1, 32, 1, 1, 256, 192);
 }

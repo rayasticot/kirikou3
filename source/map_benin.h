@@ -184,7 +184,7 @@ evil be_evil26 ={
 cave cavebe ={
   .bg = "bg/cavebe",
   .cmap = "col/cavebecol",
-  .song = MOD_ATTAQUE,
+  .song = MOD_CAVE,
   .firstevil = &be_evil26
 };
 char* be_sprite = "spr/npc/be%u";

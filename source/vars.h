@@ -8,4 +8,5 @@ extern cave* cavebe;
 extern u16_f timer;
 extern bool iscave;
 extern balle bal;
+extern u8_f cur_song;
 #endif

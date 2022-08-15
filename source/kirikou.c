@@ -15,28 +15,95 @@ void kirikouStart(){
     NF_CreateSprite(1, 0, 0, 0, kirikou.x, kirikou.y);
     //NF_CreateSprite(0, 15, 15, 15, kirikou.x/4, kirikou.y/4);
 }
-void bulletUpdate(u8_f nombre){
+
+static void bulletCamUpdate(){
+    if(bal.x > cam.x-16 && bal.x - cam.x < 256){
+        bal.sprx = bal.x - cam.x;
+    }
+    else{
+        bal.sprx = 256;
+    }
+    if(bal.y > cam.y-32 && bal.y - cam.y < 192){
+        bal.spry = bal.y - cam.y;
+    }
+    else{
+        bal.spry = 192;
+    }
+    NF_MoveSprite(1, 32, bal.sprx, bal.spry);
+}
+
+static void bulletUpdate(){
     switch(bal.side){
         case 0:
             break;
         case 1:
-            bal.x++;
+            if(NF_GetTile(0, bal.x, bal.y) == 0){
+                bal.x+=5;
+            }
+            else{
+                bal.side = 0;
+                bal.x = 768;
+                bal.y = 768;
+            }
             break;
         case 2:
-            bal.x--;
+            if(NF_GetTile(0, bal.x, bal.y) == 0){
+                bal.x-=5;
+            }
+            else{
+                bal.side = 0;
+                bal.x = 768;
+                bal.y = 768;
+            }
             break;
         case 3:
-            bal.y++;
+            if(NF_GetTile(0, bal.x, bal.y) == 0){
+                bal.y+=5;
+            }
+            else{
+                bal.side = 0;
+                bal.x = 768;
+                bal.y = 768;
+            }
             break;
         case 4:
-            bal.y--;
+            if(NF_GetTile(0, bal.x, bal.y) == 0){
+                bal.y-=5;
+            }
+            else{
+                bal.side = 0;
+                bal.x = 768;
+                bal.y = 768;
+            }
             break;
     }
+    bulletCamUpdate();
+}
+static void bulletStart(){
+    bal.x = kirikou.x;
+    bal.y = kirikou.y;
+    mmEffect(SFX_GUN);
 }
 void kirikouGunUpdate(){
-    if(KEY_A & keysDown()){
-
+    if(bal.side == 0){
+        if(KEY_A & keysDown()){
+            bulletStart();
+            bal.side = 1;
+        }
+        if(KEY_B & keysDown()){
+            bulletStart();
+            bal.side = 3;
+        }
+        if(KEY_Y & keysDown()){
+            bulletStart();
+            bal.side = 2;
+        }
+        if(KEY_X & keysDown()){
+            bulletStart();
+            bal.side = 4;
+        }
     }
+    bulletUpdate();
 }
 void kirikouUpdate(){
     int spr_x, spr_y;
@@ -55,7 +122,7 @@ void kirikouUpdate(){
         }
     }
     if(KEY_DOWN & keysHeld()){
-        if(NF_GetTile(0, kirikou.x, kirikou.y+33) == 0 && NF_GetTile(0, kirikou.x+14, kirikou.y+33) == 0){
+        if(NF_GetTile(0, kirikou.x, kirikou.y+31) == 0 && NF_GetTile(0, kirikou.x+14, kirikou.y+31) == 0){
             kirikou.y += 1;
         }
     }
