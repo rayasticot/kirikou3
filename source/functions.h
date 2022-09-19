@@ -3,9 +3,10 @@
 void kirikouStart();
 void kirikouUpdate();
 void kirikouGunUpdate();
-void LoadMap(map* mape);
+void LoadMap(map* mape, bool unload);
 void UpdateObj();
 bool checkCollision(int x1, int y1, int sx1, int sy1, int x2, int y2, int sx2, int sy2);
-void LoadCave(cave* cav, map* mapbuf);
-void EvilUpdate();
+//void LoadCave(cave* cav, map* mapbuf);
+void EvilUpdate(obj* objbuf);
+void UnLoadSprites();
 #endif

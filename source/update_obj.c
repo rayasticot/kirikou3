@@ -112,6 +112,12 @@ void UpdateObj(){
       case 1:
         UpdateNpc(objbuf);
         break;
+      case 3:
+        EvilUpdate(objbuf);
+        break;
+      case 4:
+        EvilUpdate(objbuf);
+        break;
     }
     if(objbuf->next == NULL) break;
     objbuf = objbuf->next;

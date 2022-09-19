@@ -22,12 +22,12 @@ typedef struct obj{
 	int radius;
 	u8_f id;
 	u8_f type;
-	u8_f state;
+	u8_f state; //side
 	u8_f sound[5];
-	u8_f dialog;
+	u8_f dialog; //life
 	struct obj* next;
 } obj;
-typedef struct evil{
+/*typedef struct evil{
 	int x;
 	int y;
 	int sprx;
@@ -43,7 +43,7 @@ typedef struct cave{
 	char* cmap;
 	int song;
 	evil* firstevil;
-} cave;
+} cave;*/
 typedef struct map{
 	char* bg_map;
 	char* bg_obj;
@@ -52,6 +52,8 @@ typedef struct map{
 	char** npc_link;
 	int song;
 	obj* firstobj;
-	cave* cave;
+	bool type;
+	u8_f spritenum;
+	struct map* cave;
 } map;
 #endif

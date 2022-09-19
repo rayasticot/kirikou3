@@ -12,7 +12,7 @@
 pos kirikou;
 pos cam;
 map* curmap;
-cave* curcave;
+//cave* curcave;
 u16_f timer;
 bool iscave = false;
 balle bal;
@@ -59,7 +59,7 @@ int main(int argc, char **argv){
 
 	curmap = &be;
 
-	LoadMap(curmap);
+	LoadMap(curmap, false);
 	kirikouStart();
 	NF_DeleteTiledBg(0, 3);
 
@@ -76,11 +76,12 @@ int main(int argc, char **argv){
 		kirikouUpdate();
 		UpdateObj();
 		if(iscave == true){
-			EvilUpdate();
+			UpdateObj();
 			kirikouGunUpdate();
 		}
 		if(KEY_Y & keysDown() && iscave == false){
-			LoadCave(&cavebe, &be);
+			UnLoadSprites();
+			LoadMap(&cavebe, true);
 		}
 		if(timer != 0) timer--;
 	}

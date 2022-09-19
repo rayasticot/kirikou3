@@ -3,8 +3,8 @@
 extern pos kirikou;
 extern pos cam;
 extern map* curmap;
-extern cave* curcave;
-extern cave* cavebe;
+//extern cave* curcave;
+extern map* cavebe;
 extern u16_f timer;
 extern bool iscave;
 extern balle bal;
